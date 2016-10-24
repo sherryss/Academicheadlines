@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recommend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.academicheadlines.RecommendActivity">
+
+    <RelativeLayout
+        android:id="@+id/buju5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="我的推荐"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="#ffffff"
+            android:text="编辑" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/papertitle1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/buju5"
+        android:layout_marginTop="19dp"
+        android:background="#6699"
+        android:gravity=""
+        android:text="ICA with Reconstruction Cost for Efficient Overcomplete Feature Learning" />
+
+    <Button
+        android:id="@+id/papertitle2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/papertitle1"
+        android:layout_marginTop="15dp"
+        android:background="#6699"
+        android:gravity=""
+        android:text="Sparse Bayesian Learning and the Relevance Vector Machine" />
+</RelativeLayout>

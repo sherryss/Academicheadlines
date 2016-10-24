@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5pt"
+    tools:context="com.example.admin.academicheadlines.Paper_answer">
+    <TextView
+        android:id="@+id/id_paper_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Social Collaborative Filtering by Trust"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:layout_marginBottom="5pt"
+        android:layout_below="@+id/id_delete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ic_paper_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5pt"
+            android:layout_marginBottom="5pt"
+            android:src="@drawable/avatar"/>
+        <TextView
+            android:id="@+id/ic_tx_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ic_paper_photo"
+            android:text="Joe Sun"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ic_tx_writer_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="优秀回答者 Car desiger"
+            android:textColor="#000000"
+            android:layout_below="@+id/ic_tx_writer"
+            android:layout_toRightOf="@+id/ic_paper_photo"
+            android:layout_toEndOf="@+id/ic_paper_photo" />
+        <Button
+            android:id="@+id/ic_paper_read_concern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="+关注"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/ic_anser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To accurately and actively provide users with their potentially interested information or services is the main task of a recommender system. Collaborative filtering is one of the most widely adopted recommender algorithms, whereas it is suffering the issues of data sparsity and cold start that will severely degrade quality of  recommendations. To address such issues, this article proposes a novel method, trying to improve the performance of collaborative filtering recommendation by means of elaborately integrating twofold sparse information, the conventional rating data given by users and the social trust network among the same users. It is a model-based method adopting matrix To accurately and actively provide users with their potentially interested information or services is the main task of a recommender system. Collaborative filtering is one of the most widely adopted recommender algorithms, whereas it is suffering the issues of data sparsity and cold start that will severely degrade quality of  recommendations. To address such issues, this article proposes a novel method, trying to improve the performance of collaborative filtering recommendation by means of elaborately integrating twofold sparse information, the conventional rating data given by users and the social trust network among the same users. It is a model-based method adopting matrix factorizationfactorization technique to map users into low-dimensional latent feature spaces in terms of their trust relationship, aiming to reflect users’ reciprocal influence on their own opinions more reasonably. The validations against a real-world dataset show that the proposed method performs much better than state-of-the-art recommendation algorithms for social collaborative filtering by trust."
+            android:textSize="8pt"
+            android:textColor="#000000"
+            android:layout_marginRight="5pt"
+            android:layout_below="@+id/ic_frame_top"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </ScrollView>
+</LinearLayout>

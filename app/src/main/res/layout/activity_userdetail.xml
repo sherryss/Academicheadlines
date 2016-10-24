@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_userdetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.admin.academicheadlines.UserdetailActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="个人信息"
+        android:id="@+id/textView5"
+        android:gravity="center"
+        android:background="#ffffff"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ffffff"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="头像"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView4"
+            android:src="@drawable/defult"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/textView6"
+        android:text="名字                                                                     啦啦啦先生"
+        android:textColor="#000000"
+        android:gravity=""
+        android:background="#ffffff"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/textView7"
+        android:text="性别                                                                             男"
+        android:gravity=""
+        android:background="#ffffff"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/textView8"
+        android:text="地区                                                                        吉林长春"
+        android:gravity=""
+        android:background="#ffffff"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/textView9"
+        android:text="学校                                                                        吉林大学"
+        android:gravity=""
+        android:background="#ffffff"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:layout_marginTop="17dp" />
+
+
+
+</RelativeLayout>

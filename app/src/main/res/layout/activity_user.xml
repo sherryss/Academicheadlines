@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.academicheadlines.UserActivity">
+
+    <RelativeLayout
+        android:id="@+id/y1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:id="@+id/touxiang"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:scaleType="fitXY"
+            android:background="#000000"
+            android:src="@drawable/defult" />
+
+        <TextView
+            android:id="@+id/yonghuming"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/touxiang"
+            android:gravity="center"
+            android:text="lalala先生" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/yonghuming"
+            android:background="#ffffff">
+
+            <ImageButton
+                android:id="@+id/shezhi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="25dp"
+                android:background="#ffffff"
+                android:scaleType="fitXY"
+                android:src="@drawable/shezhi" />
+
+            <ImageButton
+                android:id="@+id/yejian"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:scaleType="fitXY"
+                android:src="@drawable/yejian" />
+
+            <ImageButton
+                android:id="@+id/shoucang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:background="#ffffff"
+                android:scaleType="fitXY"
+                android:src="@drawable/shoucang" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/y1">
+
+        <Button
+            android:id="@+id/MyRecommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/looked"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:text="我的推荐"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MyRecommend"
+            android:layout_marginTop="15dp"
+            android:background="#ffffffff"
+            android:gravity="center_vertical"
+            android:text="消息通知"
+            android:textSize="20sp" />
+
+
+
+        <Button
+            android:id="@+id/looked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="36dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:text="浏览历史"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/follow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notice"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:text="我的关注"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/Live"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/follow"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:text="直播讲座"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Live"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:text="反馈"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
