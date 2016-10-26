@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="#0080FF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/answer_comment_back"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="10pt"
+            android:background="#00000000"
+            android:src="@drawable/back"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_weight="6"
+            android:layout_width="0pt"
+            android:layout_height="20pt"
+            android:gravity="center"
+            android:text="评论"
+            android:textSize="12pt"
+            android:textColor="#FFF"/>
+        <TextView
+            android:id="@+id/answer_comment_more"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="20pt"
+            android:gravity="center"
+            android:text=": "
+            android:textSize="12pt"
+            android:textColor="#FFF"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/answer_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <com.example.admin.academicheadlines.ListViewForScrollView
+        android:id="@+id/answer_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="5pt"
+        android:divider="#00000000">
+
+    </com.example.admin.academicheadlines.ListViewForScrollView>
+    </ScrollView>
+</LinearLayout>
+</LinearLayout>
