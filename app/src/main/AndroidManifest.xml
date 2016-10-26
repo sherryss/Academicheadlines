@@ -27,15 +27,16 @@
         <activity android:name=".LiveActivity" />
         <activity android:name=".UserdetailActivity" />
         <activity android:name=".FollowActivity" />
-        <activity android:name=".Paper"></activity>
         <activity
-            android:name=".Paper_answer"
-            android:label="Paper_answer">
+            android:name=".Paper"
+            android:configChanges="orientation">
         </activity>
         <activity
-            android:name=".Paper_answer_comment"
-            android:label="Paper_answer_comment">
-        </activity>
+            android:name=".answer"
+            android:label="answer"></activity>
+        <activity
+            android:name=".Answer_Comment"
+            android:label="Answer_Comment"></activity>
     </application>
 
 </manifest>

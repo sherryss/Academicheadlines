@@ -2,15 +2,14 @@ package com.example.admin.academicheadlines;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Window;
 
 /**
- * Created by Administrator on 2016/10/17 0017.
+ * Created by lzy on 2016/10/24.
  */
-public class Paper_answer extends Activity {
-    @Override
+public class answer extends Activity {
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.paper_answer);
+        setContentView(R.layout.activity_answer);
     }
 }
