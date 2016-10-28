@@ -14,7 +14,7 @@ public class Answer_Comment_Class {
     public Answer_Comment_Class() {
     }
 
-    public Answer_Comment_Class( int user_avatar,String user_Name, String answer_content,String answer_agree, String answer_comment,String answer_time) {
+    public Answer_Comment_Class(int user_avatar, String user_Name, String answer_content, String answer_agree, String answer_comment, String answer_time) {
         this.user_avatar = user_avatar;
         this.user_Name = user_Name;
         this.answer_content = answer_content;
