@@ -2,27 +2,28 @@ package com.example.admin.academicheadlines;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Paper extends AppCompatActivity {
 
-    private List<Answer_Class> mData = null;
+    private LinkedList<Answer_Class> mData = null;
     private Context mContext;
     private Answer_List mAdapter = null;
     private ListView list_answer;
-
+    private Button btn_add_answer;
+    static int flag=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class Paper extends AppCompatActivity {
 
         mContext = Paper.this;
         list_answer = (ListView) findViewById(R.id.paper_answer);
+        btn_add_answer=(Button)findViewById(R.id.btn_add_answer);
         mData = new LinkedList<Answer_Class>();
         for (int i = 1; i <=10; i++){
             mData.add(new Answer_Class(R.drawable.avatar,"USER"+i, "for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.",(10+i)+" 赞同  . ","10"+i+" 评论  . ",i+" 分钟前"));
@@ -42,6 +44,14 @@ public class Paper extends AppCompatActivity {
         mAdapter = new Answer_List((LinkedList<Answer_Class>) mData, mContext);
         list_answer.setAdapter(mAdapter);
         list_answer.setFocusable(false);
+
+        btn_add_answer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAdapter.add(0,new Answer_Class(R.drawable.avatar,"USER_Test"+flag, "for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.",(10+flag)+" 赞同  . ","10"+flag+" 评论  . ",flag+" 分钟前"));
+                flag++;
+            }
+        });
     }
 
 
@@ -139,6 +149,13 @@ public class Paper extends AppCompatActivity {
             public TextView answer_agree;
             public TextView answer_comment;
             public TextView answer_time;
+        }
+        public void add(int position,Answer_Class data){
+            if (mData == null) {
+                mData = new LinkedList<>();
+            }
+            mData.add(position,data);
+            notifyDataSetChanged();
         }
     }
 

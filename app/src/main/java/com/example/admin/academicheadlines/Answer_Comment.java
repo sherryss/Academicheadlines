@@ -2,9 +2,7 @@ package com.example.admin.academicheadlines;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +25,6 @@ public class Answer_Comment extends Activity {
     private Answer_List mAdapter = null;
     private ListView list_answer_comment;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_comment);
