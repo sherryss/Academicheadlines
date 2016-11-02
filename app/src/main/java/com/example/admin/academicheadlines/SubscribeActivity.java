@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LiveActivity extends AppCompatActivity {
+public class SubscribeActivity extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_live);
-        button= (Button) findViewById(R.id.button6);
+        setContentView(R.layout.activity_subscribe);
+        button = (Button) findViewById(R.id.Subscribe_papertitle);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(LiveActivity.this,LiveAllActivity.class);
+                Intent intent =new Intent(SubscribeActivity.this,Paper.class);
                 startActivity(intent);
             }
         });

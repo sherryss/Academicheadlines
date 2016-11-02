@@ -24,6 +24,7 @@ public class Paper extends AppCompatActivity {
     private ListView list_answer;
     private Button btn_add_answer;
     static int flag=1;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,14 @@ public class Paper extends AppCompatActivity {
             public void onClick(View view) {
                 mAdapter.add(0,new Answer_Class(R.drawable.avatar,"USER_Test"+flag, "for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.",(10+flag)+" 赞同  . ","10"+flag+" 评论  . ",flag+" 分钟前"));
                 flag++;
+            }
+        });
+        button = (Button) findViewById(R.id.button1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Paper.this,ContentActivity.class);
+                startActivity(intent);
             }
         });
     }

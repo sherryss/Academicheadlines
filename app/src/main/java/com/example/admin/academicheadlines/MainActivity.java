@@ -21,8 +21,9 @@ public class MainActivity extends ToolbarActivity {
     RecyclerView recyclerView;
     private MainAdapter adapter;
     private ImageButton button1;
-    private ImageButton button2;
+    private ImageView imageView2;
     private ImageView imageView3;
+    private ImageView imageview;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -46,11 +47,27 @@ public class MainActivity extends ToolbarActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        imageView2= (ImageView) findViewById(R.id.subscribe);
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,SubscribeActivity.class);
+                startActivity(intent);
+            }
+        });
         imageView3= (ImageView) findViewById(R.id.User);
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MyActivity.class);
+                Intent intent= new Intent(MainActivity.this,MyActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageview= (ImageView) findViewById(R.id.liveImageView);
+        imageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(MainActivity.this,LiveAllActivity.class);
                 startActivity(intent);
             }
         });

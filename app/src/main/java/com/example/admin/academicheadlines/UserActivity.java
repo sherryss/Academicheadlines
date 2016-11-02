@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class UserActivity extends AppCompatActivity {
     private ImageButton button1;
@@ -17,6 +18,8 @@ public class UserActivity extends AppCompatActivity {
     private Button button7;
     private Button button8;
     private ImageButton button9;
+    private ImageView home;
+    private ImageView subscribe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class UserActivity extends AppCompatActivity {
         button7= (Button) findViewById(R.id.Live);
         button8= (Button) findViewById(R.id.feedback);
         button9= (ImageButton) findViewById(R.id.touxiang);
+        home= (ImageView) findViewById(R.id.home2);
+        subscribe= (ImageView) findViewById(R.id.subscribe2);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +97,20 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserActivity.this,UserdetailActivity.class);
+                startActivity(intent);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(UserActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        subscribe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserActivity.this,SubscribeActivity.class);
                 startActivity(intent);
             }
         });
