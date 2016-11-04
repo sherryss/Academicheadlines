@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -18,41 +21,26 @@ import java.util.List;
 /**
  * Created by lzy on 2016/10/25.
  */
-public class Answer_Comment extends Activity {
+public class Answer_Comment extends Activity implements View.OnClickListener{
 
     private List<Answer_Comment_Class> mData = null;
     private Context mContext;
     private Answer_List mAdapter = null;
     private ListView list_answer_comment;
+    private ImageButton answer_comment_back;
+    private EditText answer_comment_edittext_add;
+    private Button answer_comment_button_add;
 
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_comment);
-
-        ImageButton answer_comment_back=(ImageButton)findViewById(R.id.answer_comment_back);
-
-        answer_comment_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Answer_Comment.this.finish();
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-
+        bindViews();
 
         mContext = Answer_Comment.this;
-        list_answer_comment = (ListView) findViewById(R.id.answer_comment);
         mData = new LinkedList<Answer_Comment_Class>();
-        for (int i = 1; i <=10; i++){
+        for (int i = 1; i <=10; i++)
+        {
             mData.add(new Answer_Comment_Class(R.drawable.avatar,"USER"+i, "for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.",(10+i)+" 赞同  . ", "查看对话  . ",i+" 分钟前"));
         }
         mAdapter = new Answer_List((LinkedList<Answer_Comment_Class>) mData, mContext);
@@ -61,7 +49,44 @@ public class Answer_Comment extends Activity {
     }
 
 
-    public class Answer_List extends BaseAdapter {
+
+    private void bindViews()
+    {
+        list_answer_comment = (ListView) findViewById(R.id.answer_comment);
+        answer_comment_back=(ImageButton)findViewById(R.id.answer_comment_back);
+        answer_comment_edittext_add=(EditText)findViewById((R.id.answer_comment_edittext_add));
+        answer_comment_button_add=(Button)findViewById(R.id.answer_comment_button_add);
+
+        answer_comment_back.setOnClickListener(this);
+        answer_comment_button_add.setOnClickListener(this);
+
+
+    }
+
+
+    public void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.answer_comment_back:
+                Answer_Comment.this.finish();
+                break;
+            case R.id.answer_comment_button_add:
+                mAdapter.add(0,new Answer_Comment_Class(R.drawable.avatar,"USER_NEW", answer_comment_edittext_add.getText().toString()+" .",10+" 赞同  . ", "查看对话  . ",1+" 分钟前"));
+                answer_comment_edittext_add.setText("");
+                InputMethodManager imm =  (InputMethodManager)getSystemService(mContext.INPUT_METHOD_SERVICE);
+                if(imm != null)
+                {
+                    imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+                }
+                    break;
+        }
+    }
+
+
+
+    public class Answer_List extends BaseAdapter
+    {
 
         private LinkedList<Answer_Comment_Class> mData;
         private Context mContext;
@@ -130,6 +155,16 @@ public class Answer_Comment extends Activity {
             public TextView answer_agree;
             public TextView answer_comment;
             public TextView answer_time;
+        }
+
+        public void add(int position,Answer_Comment_Class data)
+        {
+            if (mData == null)
+            {
+                mData = new LinkedList<>();
+            }
+            mData.add(position,data);
+            notifyDataSetChanged();
         }
     }
 

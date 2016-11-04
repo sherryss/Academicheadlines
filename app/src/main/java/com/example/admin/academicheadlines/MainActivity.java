@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.admin.academicheadlines.view.SlidingMenu;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -24,6 +25,7 @@ public class MainActivity extends ToolbarActivity {
     private ImageView imageView2;
     private ImageView imageView3;
     private ImageView imageview;
+    private SlidingMenu mLeftMenu;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -71,6 +73,7 @@ public class MainActivity extends ToolbarActivity {
                 startActivity(intent);
             }
         });
+        mLeftMenu= (SlidingMenu) findViewById(R.id.id_menu);
     }
 
     /**
@@ -107,5 +110,8 @@ public class MainActivity extends ToolbarActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+    public void toggleMenu(View view){
+        mLeftMenu.toggle();
     }
 }
