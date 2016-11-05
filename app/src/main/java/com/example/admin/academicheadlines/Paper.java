@@ -2,8 +2,9 @@ package com.example.admin.academicheadlines;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,16 +16,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
+import java.util.List;
 
-public class Paper extends AppCompatActivity {
+public class Paper extends  ActionBarActivity {
 
     private LinkedList<Answer_Class> mData = null;
     private Context mContext;
     private Answer_List mAdapter = null;
     private ListView list_answer;
     private Button btn_add_answer;
+    private String answer_add_content;
     static int flag=1;
-    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,18 +51,23 @@ public class Paper extends AppCompatActivity {
         btn_add_answer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAdapter.add(0,new Answer_Class(R.drawable.avatar,"USER_Test"+flag, "for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.for ICA that allows us to learn highly overcomplete sparse features even on unwhitened data.",(10+flag)+" 赞同  . ","10"+flag+" 评论  . ",flag+" 分钟前"));
-                flag++;
+                Intent intent = new Intent();
+                intent.setClass(Paper.this,Answer_Add.class);
+                startActivityForResult(intent,0x123);
+
             }
         });
-        button = (Button) findViewById(R.id.button1);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Paper.this,ContentActivity.class);
-                startActivity(intent);
-            }
-        });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 0x123 && resultCode == 0x123)
+        {
+            Bundle bd = data.getExtras();
+            answer_add_content=bd.getString("answer_content");
+            mAdapter.add(0,new Answer_Class(R.drawable.avatar,"USER_Test"+flag, answer_add_content,(10+flag)+" 赞同  . ","10"+flag+" 评论  . ",flag+" 分钟前"));
+            flag++;
+        }
     }
 
 
@@ -167,8 +174,6 @@ public class Paper extends AppCompatActivity {
             notifyDataSetChanged();
         }
     }
-
-
 
 
 

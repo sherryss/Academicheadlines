@@ -2,7 +2,9 @@ package com.example.admin.academicheadlines;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,12 +75,15 @@ public class Answer_Comment extends Activity implements View.OnClickListener{
                 break;
             case R.id.answer_comment_button_add:
                 mAdapter.add(0,new Answer_Comment_Class(R.drawable.avatar,"USER_NEW", answer_comment_edittext_add.getText().toString()+" .",10+" 赞同  . ", "查看对话  . ",1+" 分钟前"));
+                //输入完成，编辑框置空
                 answer_comment_edittext_add.setText("");
+                //输入完成键盘收起
                 InputMethodManager imm =  (InputMethodManager)getSystemService(mContext.INPUT_METHOD_SERVICE);
                 if(imm != null)
                 {
                     imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
                 }
+
                     break;
         }
     }

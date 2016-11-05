@@ -46,6 +46,7 @@
 
         <activity android:name=".LiveAllActivity" />
         <activity android:name=".SubscribeActivity"></activity>
+        <activity android:name=".Answer_Add"/>
     </application>
 
 </manifest>
