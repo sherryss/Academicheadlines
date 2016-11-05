@@ -139,8 +139,13 @@ public class Paper extends  ActionBarActivity {
                 public void onClick(View v) {
                     if(position==0)
                     {
+                        Bundle bd = new Bundle();
+                        bd.putString("answer_answer_paper_title",((TextView)findViewById(R.id.paper_title)).getText().toString());
+                        bd.putString("answer_answer_user_name",mData.get(position).getuser_Name());
+                        bd.putString("answer_answer_content",mData.get(position).getanswer_content());
                         Intent intent = new Intent();
                         intent.setClass(Paper.this,answer.class);
+                        intent.putExtras(bd);
                         startActivity(intent);
                     }
                 }
