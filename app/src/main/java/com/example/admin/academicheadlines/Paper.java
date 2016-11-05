@@ -2,9 +2,8 @@ package com.example.admin.academicheadlines;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Paper extends  ActionBarActivity {
 
@@ -25,6 +23,7 @@ public class Paper extends  ActionBarActivity {
     private Answer_List mAdapter = null;
     private ListView list_answer;
     private Button btn_add_answer;
+    private Button paper_button1;
     private String answer_add_content;
     static int flag=1;
     @Override
@@ -57,6 +56,16 @@ public class Paper extends  ActionBarActivity {
 
             }
         });
+        paper_button1=(Button)findViewById(R.id.paper_button1);
+        paper_button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(Paper.this,ContentActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

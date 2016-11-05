@@ -19,7 +19,7 @@
       android:paddingTop="5pt"
         android:background="#FFFFFF">
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/paper_button1"
             android:layout_marginLeft="5pt"
             android:layout_marginRight="5pt"
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
 
             android:text="科技"/>
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/paper_button2"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
             android:textSize="9pt"
@@ -39,7 +39,7 @@
             android:background="@drawable/paper_topic_style"
             android:text="数据挖掘"/>
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/paper_button3"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
             android:textSize="9pt"
@@ -48,7 +48,7 @@
             android:background="@drawable/paper_topic_style"
             android:text="大数据"/>
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/paper_button4"
             android:layout_marginRight="5pt"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
@@ -57,7 +57,7 @@
             android:background="@drawable/paper_topic_style"
             android:text="TPAMI"/>
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/paper_button5"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
             android:textSize="9pt"
@@ -66,7 +66,7 @@
             android:background="@drawable/paper_topic_style"
             android:text="AAAI"/>
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/paper_button6"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
             android:textSize="9pt"
@@ -75,7 +75,7 @@
             android:background="@drawable/paper_topic_style"
             android:text="数据挖掘"/>
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/paper_button7"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
             android:textSize="9pt"
@@ -84,7 +84,7 @@
             android:background="@drawable/paper_topic_style"
             android:text="人工智能"/>
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/paper_button8"
             android:layout_marginRight="5pt"
             android:layout_width="wrap_content"
             android:layout_height="20pt"
@@ -189,7 +189,7 @@
             android:text="写回答"/>
     </LinearLayout>
 
-<com.example.admin.academicheadlines.ListViewForScrollView
+<com.example.lzy.academicheadlines.ListViewForScrollView
     android:id="@+id/paper_answer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -197,6 +197,6 @@
     android:divider="#00000000"
     >
 
-</com.example.admin.academicheadlines.ListViewForScrollView>
+</com.example.lzy.academicheadlines.ListViewForScrollView>
 </LinearLayout>
 </ScrollView>
